@@ -10,6 +10,8 @@
 
    <url>
       <loc>http://www.example.com/catalog?item=12&amp;desc=vacation_hawaii</loc>
+      <lastmod>2024-12-04</lastmod>
       <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
    </url>
-</urlset
+</urlset>
