@@ -39,7 +39,7 @@
             cartList.innerHTML = '';
             for (const product in cart) {
                 const listItem = document.createElement('li');
-                listItem.innerText = `${product} - Quantity: ${cart[product].quantity} - Total Price: Rs${cart[product].totalPrice.toFixed(2)}`;
+                listItem.innerText = `${product} - Quantity: ${cart[product].quantity} - Total Price: £${cart[product].totalPrice.toFixed(2)}`;
                 cartList.appendChild(listItem);
             }
         }
