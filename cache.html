@@ -1,4 +1,27 @@
 <!DOCTYPE html>
+<button style="position: absolute; top: 10px; right: 10px;" onclick="openCheckout()">Checkout</button>
+<script>
+    function openCheckout() {
+        alert('Proceeding to checkout...');
+        if (Object.keys(cart).length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+
+        let cartSummary = 'Your cart contains:\n';
+        for (const product in cart) {
+            cartSummary += `${product} - Quantity: ${cart[product].quantity} - Total Price: £${cart[product].totalPrice.toFixed(2)}\n`;
+        }
+        cartSummary += '\nProceed to payment?';
+
+        if (confirm(cartSummary)) {
+            localStorage.removeItem('cart');
+            cart = {};
+            updateCartDisplay();
+            alert('Thank you for your purchase!');
+        }
+    }
+</script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
